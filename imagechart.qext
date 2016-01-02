@@ -1,0 +1,13 @@
+{
+	"name" : "Image Chart",
+	"description" : "Bar chart with images",
+	"icon" : "image",
+	"type" : "visualization",
+	"version": "1.0.0",
+	"author": "Erik Wetterberg",
+	"homepage" : "",
+	"keywords" : "qlik-sense, chart, visualization",
+	"license" : "MIT",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=2.1.x" }
+}
