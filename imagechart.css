@@ -1,6 +1,7 @@
 /* rules for both orientations */
 
 .qv-object-imagechart .bar {
+    position: absolute;
     background-color: #e5e4e2;
 }
 
@@ -29,6 +30,10 @@
 .qv-object-imagechart .scroll {
     position: absolute;
 }
+.qv-object-imagechart .label {
+    position: absolute;
+    overflow: hidden;
+}
 
 
 /* rules for horizontal */
@@ -36,7 +41,6 @@
 .qv-object-imagechart .horiz .grid {
     height: 100%;
     left: 120px;
-    /* labelwidth */
     right: 10px;
 }
 
@@ -57,26 +61,17 @@
 }
 
 .qv-object-imagechart .horiz .row {
-    height: 32px;
-    /* barwidth */
     line-height: 32px;
     width: 100%;
-    
-    /* spacing */
 }
 
 .qv-object-imagechart .horiz .label {
-    float: left;
+    left: 0;
     width: 120px;
-    /* labelwidth */
-    overflow: hidden;
-    clear: left;
 }
 
 .qv-object-imagechart .horiz .bar {
-    float: left;
-    height: 32px;
-    /* barwidth */
+    left: 120px;
 }
 
 
@@ -112,24 +107,18 @@
     position: absolute;
     bottom: 0;
     width: 60px;
-    /* ?? */
     height: 100%;
     margin-left: 10px;
 }
 
 .qv-object-imagechart .vert .label {
-    position: absolute;
     bottom: 0;
     width: 60px;
-    /* labelwidth */
     height: 40px;
-    overflow: hidden;
 }
 
 .qv-object-imagechart .vert .bar {
-    position: absolute;
     bottom: 40px;
     width: 60px;
     background-position: bottom;
-    /* barwidth */
 }

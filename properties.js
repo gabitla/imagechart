@@ -132,7 +132,7 @@ define(["qlik"], function(qlik) {
                         label: "Label style",
                         type: "string",
                         expression: "optional",
-                        defaultValue: "font-weight:bold"
+                        defaultValue: "font-weight:bold;"
                     }
                 }
             },
