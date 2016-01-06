@@ -15,10 +15,15 @@ define(["jquery", "./properties", "text!./imagechart.css"],
             return el;
         }
 
-        function getBgImage(layout) {
+        function getBgImage(layout, meas) {
             var bgImage = "";
             if (layout.image === 'link') {
-                bgImage = 'url("' + layout.imageurl + '")';
+                return 'url("' + layout.imageurl + '")';
+            }
+            if (layout.image === "meas") {
+                if (meas) {
+                    bgImage = 'url("' + meas.qText + '")';
+                }
             } else if (layout.image) {
                 layout.qMediaList.qItems.forEach(function(item) {
                     if (item.qUrlDef === layout.image) {
@@ -75,7 +80,7 @@ define(["jquery", "./properties", "text!./imagechart.css"],
                     qDimensions: [],
                     qMeasures: [],
                     qInitialDataFetch: [{
-                        qWidth: 2,
+                        qWidth: 5,
                         qHeight: 50
                     }]
                 },
@@ -108,6 +113,9 @@ define(["jquery", "./properties", "text!./imagechart.css"],
                             meas = datarow[1];
                         if (dim.qIsOtherCell) {
                             dim.qText = layout.qHyperCube.qDimensionInfo[0].othersLabel;
+                        }
+                        if (layout.image === "meas") {
+                            bgImage = getBgImage(layout, datarow[2]);
                         }
                         //create row element
                         var row = createElement('div', 'row');

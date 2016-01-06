@@ -24,7 +24,7 @@ define(["qlik"], function(qlik) {
             measures: {
                 uses: "measures",
                 min: 1,
-                max: 1
+                max: 2
             },
             sorting: {
                 uses: "sorting"
@@ -61,6 +61,9 @@ define(["qlik"], function(qlik) {
                                     }, {
                                         value: "link",
                                         label: "Link"
+                                    }, {
+                                        value: "meas",
+                                        label: "2nd measure"
                                     }].concat(reply.layout.qMediaList.qItems.map(function(item) {
                                         return {
                                             value: item.qUrlDef,

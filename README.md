@@ -20,10 +20,10 @@ Orientation and image | Orientation | Horizontal | Bar orientation. Horizontal a
   | Horiz repeat | repeat | Should the image be repeated horizontally?
   | Vert repeat | repeat | Should the image be repeated vertyically?
 Width and styling | Bar Width | 60 | Bar width in pixels
- | Spacing | 10 | Space between bars in pixels
- | Bar style |border: 1px solid grey;| Additional CSS styling for bars. Use background-size if you want to scale your image.
- | Label style |font-weight:bold; | Additional styling for labels.
+    | Spacing | 10 | Space between bars in pixels
+    | Bar style |border: 1px solid grey;| Additional CSS styling for bars. Use background-size if you want to scale your image.
+    | Label style |font-weight:bold; | Additional styling for labels.
 Scale and gridlines | Min | 0 | Scale minimum
- | Max | 0 | Scale maximum. If zero, use measure max value.
- | Show gridlines| true |
- | Step | 0 | Grid line step. If zero step size will be auto calculated.
+    | Max | 0 | Scale maximum. If zero, use measure max value.
+    | Show gridlines| true |
+    | Step | 0 | Grid line step. If zero step size will be auto calculated.
