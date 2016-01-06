@@ -3,7 +3,7 @@
 	"description" : "Bar chart with images",
 	"icon" : "image",
 	"type" : "visualization",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Erik Wetterberg",
 	"homepage" : "",
 	"keywords" : "qlik-sense, chart, visualization",
