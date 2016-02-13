@@ -1,16 +1,17 @@
-/* rules for both orientations */
+.qv-object-imagechart{
+    /* rules for both orientations */
 
-.qv-object-imagechart .bar {
+ .bar {
     position: absolute;
     background-color: #e5e4e2;
 }
 
-.qv-object-imagechart .grid {
+ .grid {
     position: absolute;
     pointer-events: none;
 }
 
-.qv-object-imagechart .gridlabel {
+ .gridlabel {
     height: 20px;
     line-height: 20px;
     position: absolute;
@@ -21,89 +22,89 @@
     background-color: white;
 }
 
-.qv-object-imagechart .gridline {
+ .gridline {
     background-color: gray;
     position: absolute;
     z-index: 1;
 }
 
-.qv-object-imagechart .scroll {
+ .scroll {
     position: absolute;
 }
-.qv-object-imagechart .label {
+ .label {
     position: absolute;
     overflow: hidden;
 }
 
 
 /* rules for horizontal */
-
-.qv-object-imagechart .horiz .grid {
+ .horiz{
+  .grid {
     height: 100%;
     left: 120px;
     right: 10px;
 }
 
-.qv-object-imagechart .horiz .gridline {
+ .gridline {
     height: 100%;
     width: 1px;
 }
 
-.qv-object-imagechart .horiz .gridlabel {
+ .gridlabel {
     margin-left: -5px;
 }
 
-.qv-object-imagechart .horiz .scroll {
+ .scroll {
     overflow: auto;
     width: 100%;
     top: 20px;
     bottom: 0;
 }
 
-.qv-object-imagechart .horiz .row {
+ .row {
     line-height: 32px;
     width: 100%;
 }
 
-.qv-object-imagechart .horiz .label {
+ .label {
     left: 0;
     width: 120px;
 }
 
-.qv-object-imagechart .horiz .bar {
+  .bar {
     left: 120px;
 }
-
+    }
 
 /* rules for vertical */
 
-.qv-object-imagechart .vert {
+ .vert {
     height: 100%;
-}
 
-.qv-object-imagechart .vert .grid {
+
+  .grid {
     width: 100%;
     top: 0;
     bottom: 40px;
 }
 
-.qv-object-imagechart .vert .gridline {
+ .gridline {
     height: 1px;
     width: 100%;
 }
 
-.qv-object-imagechart .vert .gridlabel {
+  .gridlabel {
     right: 0;
     margin-bottom: -5px;
 }
 
-.qv-object-imagechart .vert .scroll {
+  .scroll {
     width: 100%;
     bottom: 0;
     top: 0;
 }
 
-.qv-object-imagechart .vert .row {
+ .row {
     position: absolute;
     bottom: 0;
     width: 60px;
@@ -111,14 +112,16 @@
     margin-left: 10px;
 }
 
-.qv-object-imagechart .vert .label {
+ .label {
     bottom: 0;
     width: 60px;
     height: 40px;
 }
 
-.qv-object-imagechart .vert .bar {
+  .bar {
     bottom: 40px;
     width: 60px;
     background-position: bottom;
+}
+     }
 }
