@@ -1,19 +1,7 @@
-define(["jquery", "./properties", "text!./imagechart.css"],
-    function($, properties, cssContent) {
+define(["./util","./properties"],
+    function( util, properties) {
         'use strict';
-        document.head.appendChild(createElement('style', undefined, cssContent));
-        //$("<style>").html(cssContent).appendTo("head");
-
-        function createElement(tag, cls, html) {
-            var el = document.createElement(tag);
-            if (cls) {
-                el.className = cls;
-            }
-            if (html !== undefined) {
-                el.innerHTML = html;
-            }
-            return el;
-        }
+        util.addStyleSheet("extensions/imagechart/imagechart.css");
 
         function getBgImage(layout, meas) {
             var bgImage = "";
@@ -48,10 +36,10 @@ define(["jquery", "./properties", "text!./imagechart.css"],
 
         function addGrid(element, min, max, layout) {
             var step = layout.step || calcStep(min, max),
-                grid = createElement('div', 'grid');
+                grid = util.createElement('div', 'grid');
             for (var x = min; x <= max; x += step) {
-                var gridlabel = createElement('span', 'gridlabel', x),
-                    gridline = createElement('div', 'gridline'),
+                var gridlabel = util.createElement('span', 'gridlabel', x),
+                    gridline = util.createElement('div', 'gridline'),
                     pos = calcPercent(min, max, x) + "%";
                 if (layout.orientation === 'horizontal') {
                     gridlabel.style.left = pos;
@@ -100,8 +88,8 @@ define(["jquery", "./properties", "text!./imagechart.css"],
                     horizontal = layout.orientation === 'horizontal',
                     w = horizontal ? $element.width() - 130 : $element.height() - 40,
                     bgImage = getBgImage(layout);
-                var wrapper = createElement('div', horizontal ? 'horiz' : 'vert'),
-                    scroll = createElement('div', 'scroll');
+                var wrapper = util.createElement('div', horizontal ? 'horiz' : 'vert'),
+                    scroll = util.createElement('div', 'scroll');
                 if (layout.showGrid) {
                     addGrid(wrapper, min, max, layout);
                 }
@@ -118,20 +106,20 @@ define(["jquery", "./properties", "text!./imagechart.css"],
                             bgImage = getBgImage(layout, datarow[2]);
                         }
                         //create row element
-                        var row = createElement('div', 'row');
+                        var row = util.createElement('div', 'row');
                         row.title = dim.qText + ': ' + meas.qText;
                         //total (-1) is not selectable
                         if (dim.qElemNumber !== -1) {
                             enableSelection(row, self, dim.qElemNumber);
                         }
                         //add label
-                        var label = createElement('div', 'label', dim.qText);
+                        var label = util.createElement('div', 'label', dim.qText);
                         if (layout.labelstyle) {
                             label.setAttribute('style', layout.labelstyle);
                         }
                         row.appendChild(label);
                         //add bar element
-                        var bar = createElement('div', 'bar');
+                        var bar = util.createElement('div', 'bar');
                         if (layout.barstyle) {
                             bar.setAttribute('style', layout.barstyle);
                         }
@@ -152,12 +140,7 @@ define(["jquery", "./properties", "text!./imagechart.css"],
                         row.appendChild(bar);
                         scroll.appendChild(row);
                     });
-                    var elem = $element[0];
-                    if (elem.childNodes.length === 0) {
-                        elem.appendChild(wrapper);
-                    } else {
-                        elem.replaceChild(wrapper, elem.childNodes[0]);
-                    }
+                    util.setChild($element[0], wrapper);
                 });
             }
         };
