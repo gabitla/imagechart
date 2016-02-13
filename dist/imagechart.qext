@@ -1,0 +1,7 @@
+{
+    "name": "imagechart",
+    "description": "Imagechart extension",
+    "version": "1.1.1",
+    "type": "visualization",
+    "author": "Erik Wetterberg"
+}
