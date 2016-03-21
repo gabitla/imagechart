@@ -29,3 +29,10 @@ Scale and gridlines | Min | 0 | Scale minimum
     | Max | 0 | Scale maximum. If zero, use measure max value.
     | Show gridlines| true |
     | Step | 0 | Grid line step. If zero step size will be auto calculated.
+    
+##Installation
+Download distribution zip file from here: https://github.com/erikwett/imagechart/raw/master/dist/imagechart.zip
+
+Qlik Sense Desktop: unzip to a directory under [My Documents]/Qlik/Sense/Extensions, for example imagechart.
+
+Qlik Sense server: import the zip file in the QMC.
